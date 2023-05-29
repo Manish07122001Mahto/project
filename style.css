@@ -1,0 +1,3877 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* .......................................LANDING PAGE SECTION STARTS HERE ...............................  */
+
+
+/* section first starts */
+
+#first .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+#first .header .logo img {
+    width: 350px;
+    margin: 22px 0 0 40px;
+}
+
+#first .nav {
+    width: 50rem;
+}
+
+#first .nav .inside-nav {
+    display: flex;
+    margin-top: 3rem;
+}
+
+#first .nav .inside-nav li {
+    list-style: none;
+    padding: 20px 40px;
+    font-weight: 400;
+    font-size: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#first .nav .inside-nav li a {
+    text-decoration: none;
+    color: black;
+
+
+}
+
+#first .nav .inside-nav li a:hover {
+    color: rgb(143, 126, 126);
+}
+
+#first {
+    height: 45rem;
+    background-image: url(Images/poster1.jpg);
+    border-bottom: 2px solid rgb(225, 220, 220);
+}
+
+#first h1 {
+    margin-top: 11.5rem;
+    margin-left: 4.0rem;
+    font-weight: bolder;
+    font-size: 60px;
+    color: black;
+    line-height: 24px;
+}
+
+#first #next-line {
+    margin-top: 3rem;
+    font-size: 60px;
+}
+
+#first h1 i {
+    font-family: cursive;
+}
+
+/* button design starts*/
+#first .landing_page_button {
+
+    position: absolute;
+    top: 33rem;
+    left: 6rem;
+}
+
+#first .landing_page_button #log-in_button {
+    position: absolute;
+    left: 21rem;
+}
+
+#first .landing_page_button button {
+    width: 15rem;
+    height: 3rem;
+    font-size: 20px;
+    border-radius: 20px;
+    background-color: rgb(198, 194, 194);
+    border: 2px solid green;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#first .landing_page_button button:hover {
+    background-color: rgb(218, 214, 214);
+}
+
+/* ----------------------------------------------------------------login-Popup design stars-----------------*/
+
+.overlay {
+    width: 100%;
+    /* background-color: green; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(198, 194, 194, 0.7);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+
+}
+
+.showoverlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+.popup {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    opacity: 1;
+
+    transform: translate(-50%, -50%) scale(0);
+    width: 380px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    z-index: 2;
+    transition: 2s
+}
+
+.show-popup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.popup .form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+
+}
+
+.popup .form .form-element {
+    margin: 15px 0px;
+
+}
+
+.popup .form .form-element label {
+    font-size: 14px;
+    color: #222;
+
+}
+
+.popup .form .form-element input[type="email"],
+.popup .form .form-element input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+}
+
+.popup .form .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.popup .form .form-element #forgot-password {
+    display: inline-block;
+    text-align: left;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* ----------------------------------------------------------------login-Popup design ends -------------------*/
+
+/* ----------------------------------------------------------------Create-account-Popup design starts -------------------*/
+.create-account-overlay {
+    width: 100%;
+    /* background-color: green; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(198, 194, 194, 0.7);
+
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+}
+
+.create-account-showoverlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+.create-account-popup {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+    width: 380px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    z-index: 5;
+    transition: 2s
+}
+
+.create-account-showpopup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+
+
+}
+
+.create-account-popup .create-account-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.create-account-popup .create-account-form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+
+}
+
+.create-account-popup .create-account-form .create-account-form-element {
+    margin: 15px 0px;
+
+}
+
+.create-account-popup .create-account-form .create-account-form-element label {
+    font-size: 14px;
+    color: #222;
+
+}
+
+.create-account-popup .create-account-form .create-account-form-element input[type="email"],
+.create-account-popup .create-account-form .create-account-form-element input[type="password"],
+.create-account-popup .create-account-form .create-account-form-element input[type="text"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+}
+
+.create-account-popup .create-account-form .create-account-form-element #create-account-visibility-create-password {
+    width: 13px;
+    position: relative;
+    top: 35px;
+    left: 183px;
+    cursor: pointer;
+}
+
+.create-account-popup .create-account-form .create-account-form-element #create-account-visibility-confirm-password {
+    width: 13px;
+    position: relative;
+    top: 35px;
+    left: 173px;
+    cursor: pointer;
+}
+
+.create-account-popup .create-account-form .create-account-form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.create-account-popup .create-account-form .create-account-form-element a {
+    display: block;
+    text-align: right;
+    font-size: 15px;
+    color: #1a79ca;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.create-account-popup .create-account-form .create-account-form-element #create-account-attention {
+    font-size: 10px;
+    color: red;
+
+}
+
+/* ----------------------------------------------------------------Create-account-Popup design ends -------------------*/
+
+
+/* ----------------------------------------------------------------forget-password-Popup design starts -------------------*/
+.forget-password-overlay {
+    width: 100%;
+    /* background-color: green; */
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    background-color: rgba(198, 194, 194, 0.7);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+
+}
+
+.forget-password-showoverlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+.forget-password-popup {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    opacity: 1;
+    /* border: 2px solid red; */
+    transform: translate(-50%, -50%) scale(0);
+    width: 380px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(204, 43, 43, 0.15);
+    border-radius: 10px;
+    z-index: 2;
+    transition: 2s
+}
+
+.forget-password-show-popup {
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1.25);
+
+}
+
+.forget-password-popup .forget-password-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.forget-password-popup .forget-password-form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+
+}
+
+.forget-password-popup .forget-password-form .forget-password-form-element {
+    margin: 15px 0px;
+
+}
+
+.forget-password-popup .forget-password-form .forget-password-form-element label {
+    font-size: 14px;
+    color: #222;
+
+}
+
+.forget-password-popup .forget-password-form .forget-password-form-element input[type="email"],
+.forget-password-popup .forget-password-form .forget-password-form-element input[type="password"],
+.forget-password-popup .forget-password-form .forget-password-form-element input[type="text"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+}
+
+.forget-password-popup .forget-password-form .forget-password-form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ----------------------------------------------------------------forget-password-Popup design ends -------------------*/
+
+#first #right_img {
+    float: right;
+    margin-top: -10rem;
+    margin-right: 4rem;
+}
+
+/* section first ends */
+
+/* section second start....................*/
+#second {
+    height: 5rem;
+    margin-top: 2rem;
+    font-size: 25px;
+    text-align: center;
+}
+
+#second #second_inside_span {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(35, 69, 223);
+}
+
+/* section second ends*/
+
+/* section third start.................*/
+#third {
+    height: 20rem;
+    margin-top: -3rem;
+}
+
+#third .heading {
+    font-size: 30px;
+    margin-left: 5rem;
+}
+
+#third .heading h1 {
+    margin-top: 100px;
+}
+
+#third .one {
+    display: flex;
+}
+
+#third .one .one_one {
+    width: 10%;
+    height: 10%;
+    margin-top: 4rem;
+    margin-left: 15rem;
+}
+
+#third .one .one_one_number {
+    display: inline-block;
+    font-size: 35px;
+    font-weight: bolder;
+}
+
+#third .one .one_one_star {
+    display: inline-block;
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+#third .one_one_analysis {
+    margin-top: -8rem;
+    margin-left: 15rem;
+    width: 20%;
+    font-size: 25px;
+    font-weight: bolder;
+}
+
+#third .one_two {
+    margin-left: 27rem;
+    width: 40%;
+}
+
+#third .one_two ul li {
+    display: flex;
+    text-align: left;
+    list-style: none;
+    font-size: 30px;
+    font-weight: bolder;
+    padding: 5px;
+
+}
+
+#third .one_two ul li #bar1 {
+    margin: 7px 0px 0px 20px;
+    background-color: green;
+    height: 25px;
+    width: 550px;
+    border-radius: 35px;
+}
+
+#third .one_two ul li #bar2 {
+    margin: 7px 0px 0px 20px;
+    background-color: green;
+    height: 25px;
+    width: 550px;
+    border-radius: 35px;
+}
+
+#third .one_two ul li #bar3 {
+    margin: 7px 0px 0px 20px;
+    background-color: green;
+    height: 25px;
+    width: 550px;
+    border-radius: 35px;
+}
+
+#third .one_two ul li #bar4 {
+    margin: 7px 0px 0px 20px;
+    background-color: orange;
+    height: 25px;
+    width: 550px;
+    border-radius: 35px;
+}
+
+#third .one_two ul li #bar5 {
+    margin: 7px 0px 0px 20px;
+    background-color: red;
+    height: 25px;
+    width: 550px;
+    border-radius: 35px;
+}
+
+/* section third ends*/
+
+/* section fourth start.....................*/
+
+#fourth {
+    height: 200px;
+    background-color: rgb(237, 237, 247);
+    color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+#fourth .footer {
+    margin-top: 30px;
+    width: 33.3%;
+}
+
+#fourth #col_1 {
+    border-right: 2px solid rgb(198, 149, 149);
+    height: 150px;
+}
+
+#fourth #col_2 {
+    border-right: 2px solid rgb(198, 149, 149);
+    height: 150px;
+}
+
+#fourth .footer h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: 165px;
+    font-size: 25px;
+}
+
+#fourth .footer ul {
+    margin-left: 160px;
+    padding: 10px;
+}
+
+#fourth .footer ul li {
+    list-style: none;
+    padding: 5px;
+}
+
+#fourth .footer ul li a {
+    text-decoration: none;
+}
+
+/* section fourth ends*/
+
+/* section fifth start..................... */
+#fifth {
+    background-color: rgb(237, 237, 247);
+
+}
+
+#fifth .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+#fifth .container .left img {
+    margin-left: 40px;
+    width: 15rem;
+    height: 5rem;
+}
+
+#fifth .container .center .company_name,
+#copyright {
+    padding-right: 1px;
+}
+
+#fifth .container .center .company_name {
+    font-size: 15px;
+    width: 15rem;
+}
+
+#fifth .container .center {
+    height: 50px;
+    width: 15rem;
+    margin-top: 2.65rem;
+    margin-left: -25rem;
+}
+
+#fifth .container .right {
+    margin-right: 6rem;
+
+}
+
+#fifth .container .right .social-links {
+    display: flex;
+}
+
+#fifth .container .right .social-links li {
+    margin: 2rem;
+    list-style: none;
+    justify-content: space-between;
+}
+
+#fifth .container .right .social-links li img {
+    width: 30px;
+    height: 30px;
+}
+
+/* section fifth end*/
+
+/* .......................................LANDING PAGE SECTION ENDS HERE ...................................  */
+
+
+/* .......................................Style for Privacy policy page STARTS  here...................................  */
+
+#privacy {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#logo img {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 350px;
+}
+
+#privacy #privacy_policy h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#privacy #privacy_policy h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+
+}
+
+#privacy #privacy_policy p {
+    font-size: 1.3rem;
+    text-align: justify;
+
+    line-height: 30px;
+    margin: 1rem 0 1rem 2rem;
+
+}
+
+#privacy #privacy_policy_page_info_collect {
+    font-size: 1.3rem;
+    margin-left: 3.5rem;
+}
+
+#privacy #privacy_policy_page_advertising_partners {
+    margin-left: 3.5rem;
+
+}
+
+#privacy #privacy_policy {
+    width: 75%;
+    /* border: 2px solid blue; */
+}
+
+#privacy #privacy-policy-ad1 {
+    width: 10rem;
+    color: orange;
+    /* border: 2px solid green; */
+}
+
+#privacy #privacy-policy-ad2 {
+    width: 10rem;
+    color: orange;
+    /* border: 2px solid yellow; */
+}
+
+/* .......................................Style for Privacy policy page ENDS  here...................................  */
+
+
+/* .......................................Style for Terms & Conditions page starts  here...................................  */
+
+#TandC {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#logo img {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 350px;
+}
+
+#TandC #Terms_and_Condition h1 {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#TandC #Terms_and_Condition #welcome {
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: rgb(22, 28, 192);
+    margin-bottom: 5px;
+}
+
+#TandC #Terms_and_Condition h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+
+}
+
+#TandC #Terms_and_Condition p {
+    font-size: 1.3rem;
+    text-align: justify;
+
+    line-height: 30px;
+    margin: 1rem 0 1rem 2rem;
+
+}
+
+#TandC #Terms_and_Condition .under_Term_and_Condition {
+    font-size: 1.3rem;
+    margin-left: 3.5rem;
+}
+
+#TandC #Terms_and_Condition {
+    width: 75%;
+}
+
+#TandC #TandC-ad1 {
+    width: 10rem;
+    color: orange;
+}
+
+#TandC #TandC-ad2 {
+    width: 10rem;
+    color: orange;
+}
+
+/* .......................................Style for Terms & Conditions page ends  here...................................  */
+
+
+/* .......................................Style for About us page starts  here.................................  */
+
+#about-us {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#logo img {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 350px;
+}
+
+#about-us #under-about-us h1 {
+    font-size: 5rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+#about-us #under-about-us p {
+    font-size: 1.3rem;
+    text-align: justify;
+
+    line-height: 30px;
+    margin: 1rem 0 1rem 2rem;
+
+}
+
+#about-us #under-about-us p span {
+    font-style: italic;
+    color: rgb(56, 2, 2);
+    font-weight: 500;
+}
+
+#about-us #under-about-us {
+    width: 75%;
+}
+
+#about-us #about-us-ad1 {
+    width: 10rem;
+    color: orange;
+}
+
+#about-us #about-us-ad2 {
+    width: 10rem;
+    color: orange;
+}
+
+/* .......................................Style for About us page ends  here...................................  */
+
+/* .......................................Style for Blog page starts  here...................................  */
+#blog {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+#logo img {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 350px;
+}
+
+#blog #under-blog h1 {
+    font-size: 4rem;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 4px solid rgb(32, 32, 125)
+}
+
+#blog #under-blog h2 {
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+}
+
+#blog #under-blog p {
+    text-align: justify;
+    font-size: 1.5rem;
+    line-height: 30px;
+    margin: 1rem 0 1rem 2rem;
+
+}
+
+#blog #under-blog {
+    width: 75%;
+}
+
+#blog #under-blog #blog-under-blog-list {
+    font-size: 1.3rem;
+    margin-left: 3.5rem;
+}
+
+#blog #under-blog #blog-under-blog-list li span {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: rgb(1, 1, 60);
+}
+
+#blog #blog-ad1 {
+    width: 10rem;
+    color: orange;
+}
+
+#blog #blog-ad2 {
+    width: 10rem;
+    color: orange;
+}
+
+/* .......................................Style for Blog page ends  here...................................  */
+
+
+/* .......................................Style for Profile page starts  here...................................  */
+#logo img {
+    position: relative;
+    top: 2rem;
+    left: 2rem;
+    width: 350px;
+}
+
+#profile {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#heading {
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 3rem;
+    position: relative;
+    /* -webkit-animation: pulsate 5s infinite;
+    animation: pulsate 5s infinite;
+    -moz-animation: pulsate 5s infinite; */
+}
+
+@-webkit-keyframes pulsate {
+    0% {
+        left: -20%;
+    }
+
+    /* 50% {
+        left: 0%;
+    } */
+
+    100% {
+        left: 20%;
+    }
+}
+
+
+@keyframes pulsate {
+    0% {
+        left: -20%;
+    }
+
+    /* 50% {
+        left: 0%;
+    } */
+
+    100% {
+        left: 20%;
+    }
+}
+
+@-moz-keyframes pulsate {
+    0% {
+        left: -20%;
+    }
+
+    /* 50% {
+        left: 0%;
+    } */
+
+    100% {
+        left: 20%;
+    }
+}
+
+#profile #under-profile {
+    width: 75%;
+    border-radius: 15px;
+    border: 2px solid rgb(230, 255, 230);
+    background-color: #f4faff;
+}
+
+#profile #under-profile #create-profile-page-notice {
+    color: red;
+    font-family: arial;
+    font-weight: bold;
+    text-align: center;
+    font-size: 25px;
+}
+
+#profile #under-profile .header {
+    height: 40vh;
+}
+
+#profile #under-profile .header img {
+    width: 100%;
+    height: 35vh;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+}
+
+#profile #under-profile .header .profile-picture {
+    scale: 0.5;
+    position: relative;
+    top: -15rem;
+    left: -5rem;
+    width: 35%;
+}
+
+#profile #under-profile .header .profile-picture img {
+    border: 10px solid white;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+
+}
+
+#profile #under-profile #profile-form {
+
+    margin: 10px auto;
+    width: 70%;
+}
+
+
+#profile #under-profile #profile-form .profile-content {
+
+    margin: 15px auto;
+    width: 80%;
+}
+
+#profile #under-profile #profile-form .profile-content label {
+    font-size: 25px;
+    color: black;
+}
+
+#profile #under-profile #profile-form .profile-content input[type="text"],
+#profile #under-profile #profile-form .profile-content input[type="date"] {
+    font-size: 15px;
+    margin-top: 10px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #2d2a2a;
+    border-radius: 5px;
+}
+
+#profile #under-profile #profile-form .profile-content #class {
+    margin-top: 10px;
+    font-size: 15px;
+
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #2d2a2a;
+    border-radius: 5px;
+}
+
+#profile #under-profile #profile-form .profile-content input[type="radio"] {
+    margin-top: 5px;
+    width: 15%;
+}
+
+#profile #under-profile #profile-form .profile-content span {
+    margin-left: 20px;
+}
+
+#profile #under-profile #profile-form .profile-content #About-us {
+    margin-top: 10px;
+    font-size: 15px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 2px solid #2d2a2a;
+    border-radius: 5px;
+}
+
+#profile #under-profile #profile-form .profile-content h3 {
+
+    font-size: 25px;
+}
+
+#profile #under-profile #profile-form .profile-content span {
+    font-size: 20px;
+    cursor: default;
+}
+
+#profile #under-profile #profile-form .profile-content span .plus {
+    font-size: 25px;
+    font-weight: bolder;
+    cursor: default;
+}
+
+#profile #under-profile #profile-form .finish-button {
+    width: 10%;
+    margin: 20px auto;
+
+}
+
+#profile #under-profile #profile-form .finish-button .finish {
+
+    width: 100%;
+    border-radius: 3px;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+#profile #under-profile #profile-form #skip {
+    text-align: right;
+    font-size: 20px;
+    font-weight: bolder;
+
+}
+
+#profile #under-profile #profile-form #skip a {
+    text-decoration: none;
+    color: black;
+}
+
+#profile #under-profile #profile-form #skip a span {
+    color: black;
+    font-size: 30px;
+
+    font-weight: bolder;
+}
+
+#profile #profile-ad1 {
+    width: 10rem;
+    color: orange;
+    border: 2px solid blue;
+}
+
+#profile #profile-ad2 {
+    width: 10rem;
+    color: orange;
+    border: 2px solid blue;
+
+}
+
+/*----------------Style for create-profile-page popup window under Add new subject starts here---------------*/
+
+.profile-page-overlay {
+    width: 100%;
+    background-color: rgba(198, 194, 194, 0.7);
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s;
+
+}
+
+.profile-page-showoverlay {
+    opacity: 1;
+    z-index: 1;
+}
+
+.profile-page-popup {
+    position: absolute;
+    top: 160%;
+    left: 44.5%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0);
+    width: 380px;
+    padding: 20px 30px;
+    background-color: white;
+    box-shadow: 2px 2px 5px 5px rgba(97, 212, 108, 0.15);
+    border-radius: 10px;
+    z-index: 2;
+    transition: 2s
+}
+
+.profile-page-show-popup {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+
+}
+
+.profile-page-popup .profile-page-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.profile-page-popup .profile-page-form h2 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px;
+    font-size: 25px;
+
+}
+
+.profile-page-popup .profile-page-form .profile-page-form-element {
+    margin: 15px 0px;
+
+}
+
+.profile-page-popup .profile-page-form .profile-page-form-element label {
+    font-size: 14px;
+    color: #222;
+
+}
+
+.profile-page-popup .profile-page-form .profile-page-form-element input[type="text"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+}
+
+.profile-page-popup .profile-page-form .profile-page-form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* ----------------Style for create-profile-page popup window under Add new subject ends here--------------- */
+
+/* .......................................Style for Profile page ends  here...................................  */
+
+
+
+/* .......................................Style for Home page Starts  here...................................  */
+
+/* -----------------------------------------------------Section first starts here-------------------------------- */
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVIGATION BAR AND RIGHT SLIDE ANIMATION STARTS @@@@@@@@@@@@@@@@@@@@@@@ */
+/* -----------------------------------------------------home-page-right-top-corner-profile-right-to-left-slide-bar starts here-------------------------------- */
+
+.universal-navigation-right-top-corner-profile-right-to-left-slide-bar {
+    height: 226.5vh;
+    width: 13%;
+    position: fixed;
+    top: 141.6%;
+    left: 108.5%;
+    border: 1px solid rgb(161, 174, 240);
+    transform: translate(-50%, -50%) scale(1.25);
+    padding: 0px 10px;
+    background-color: rgb(232, 237, 253);
+    box-shadow: 2px 2px 5px 5px rgba(85, 150, 218, 0.15);
+    border-radius: 5px;
+    opacity: 0;
+    transition: 2s;
+}
+
+.universal-navigation-right-top-corner-profile-right-to-left-show-slide-bar {
+    left: 91.8%;
+    opacity: 1;
+
+}
+
+#universal-navigation-right-top-corner-profile-right-to-left-slide-bar-close-button {
+    position: relative;
+    left: 155px;
+    margin-top: 4px;
+    width: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
+
+#universal-navigation-right-top-corner-profile-right-to-left-slide-bar-close-button:hover {
+    
+    background-color: red;
+    
+    
+}
+
+#universal-navigation-right-top-corner-profile-right-to-left-slide-bar-close-button span{
+    text-align: center;
+    font-weight: bolder;
+    font-size: 22px;
+    margin-left: 4px;
+
+}
+
+#universal-navigation-right-top-corner-profile-right-to-left-slide-bar-close-button span:hover{
+    filter: invert();
+
+}
+
+.universal-navigation-right-top-corner-profile-right-to-left-slide-bar #universal-navigation-right-top-corner-profile-right-to-left-slide-bar-profile {
+    margin-top: 15px;
+    margin-left: 16.5px;   
+    margin-bottom: 10px;
+    width: 144px;
+    height: 134px;
+    border-radius: 50%;
+    
+}
+
+.universal-navigation-right-top-corner-profile-right-to-left-slide-bar #universal-navigation-right-top-corner-profile-right-to-left-slide-bar-profile img {
+    border-radius: 50%;
+    border: 3px solid rgb(69, 68, 68);
+    height: 130px;
+    width: 140px;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.universal-navigation-right-top-corner-profile-right-to-left-slide-bar #universal-navigation-right-top-corner-profile-right-to-left-slide-bar-button {
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+
+.universal-navigation-right-top-corner-profile-right-to-left-slide-bar #universal-navigation-right-top-corner-profile-right-to-left-slide-bar-button a button {
+    /* border: 2px solid red; */
+    font-size: 25px;
+    background-color: rgb(157, 204, 141);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    border-radius: 8px;
+    height: 35px;
+    width: 165px;
+    cursor: pointer;
+}
+
+.universal-navigation-right-top-corner-profile-right-to-left-slide-bar #universal-navigation-right-top-corner-profile-right-to-left-slide-bar-button a button:hover{
+    border: 2px solid black;
+    background-color: rgb(225, 225, 250);
+}
+
+
+
+
+/* -----------------------------------------------------home-page-right-top-corner-profile-right-to-left-slide-bar ends here-------------------------------- */
+
+#universal-navigation-first #universal-navigation-header .logo {
+    display: inline-block;
+}
+
+#universal-navigation-first #universal-navigation-header .logo img {
+    width: 300px;
+    margin: 15px 0 0 40px;
+}
+
+#universal-navigation-first #universal-navigation-header {
+    border-bottom: 1px solid rgb(210, 200, 200);
+}
+
+#universal-navigation-first #universal-navigation-header .navigation {
+    margin-top: 25px;
+    width: 77%;
+    height: 5rem;
+    /* border: 2px solid aqua; */
+}
+
+#universal-navigation-first #universal-navigation-header .navigation {
+    float: right;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header {
+
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+    /* border: 2px solid aqua; */
+}
+
+
+
+#universal-navigation-first #universal-navigation-header .navigation .header .search input[type="text"] {
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 16px;
+    padding-left: 15px;
+    border-radius: 10px;
+    border: 1px solid black;
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .search {
+    height: 2.7rem;
+    margin-top: 20px;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .search button {
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: rgb(4, 4, 189);
+    position: relative;
+    top: -40px;
+    left: 290px;
+    width: 2.5rem;
+    height: 2.5rem;
+    cursor: pointer;
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .search button:hover {
+    background-color: black;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .search button img {
+    display: block;
+    filter: invert();
+    margin-left: auto;
+    margin-right: auto;
+    width: 20px;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .nav {
+    position: relative;
+    top: 1.6rem;
+    left: 3%;
+    right: 3%;
+    width: 500px;
+    height: 40%;
+
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .nav .inside-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 550px;
+
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .nav .inside-nav li {
+    list-style: none;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .nav .inside-nav li a {
+    text-decoration: none;
+    font-size: 22px;
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .nav .inside-nav li a:hover {
+    color: black;
+    background-color: #e9eff4;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .info {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 27px;
+    left: 120px;
+    height: 25px;
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .info #notification {
+    width: 25px;
+    cursor: pointer;
+    margin-left: -20px;
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .info #notification:hover {
+    background-color: #b7d3eb;
+    border-radius: 50%;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .info #favorite {
+    width: 25px;
+    cursor: pointer;
+    margin-left: 20px;
+
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .info #favorite:hover {
+    background-color: #b7d3eb;
+    border-radius: 50%;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header #user-name {
+    position: relative;
+    left: 140px;
+    top: 29px;
+    /* border: 2px solid blue; */
+    width: 63px;
+    height: 25px;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header #user-name #name {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .profile-section {
+    scale: 0.2;
+    position: relative;
+    top: -90px;
+    left: 50px;
+    height: 250px;
+    cursor: pointer;
+}
+
+#universal-navigation-first #universal-navigation-header .navigation .header .profile-section img {
+    border: 10px solid rgb(215, 215, 241);
+    background-size: cover;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+#universal-navigation-first #universal-navigation-filter {
+    position: relative;
+
+}
+
+#universal-navigation-first #universal-navigation-filter .filter {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-around;
+    margin: 8px 0px;
+    cursor: pointer;
+    position: absolute;
+}
+
+#universal-navigation-filter .filter li {
+    list-style: none;
+    font-size: 20px;
+    color: #141414;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 0px;
+    margin: 0px 60px;
+    /* border: 2px solid red; */
+}
+
+/* #universal-navigation-first #universal-navigation-filter .filter li::after {
+  display:block;
+  content: '';
+  border-bottom: solid 3px #019fb6;  
+  transform: scaleX(0);  
+  transition: transform 250ms ease-in-out;
+  transform-origin: 100% 50%;
+
+}
+
+#universal-navigation-first #universal-navigation-filter .filter li:after:hover {
+    transform: scaleX(1); 
+    transform-origin:   0% 50%;
+} */
+#universal-navigation-first #universal-navigation-filter .filter li:hover {
+    border-bottom: 3px solid blue ;
+}
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ NAVIGATION BAR AND RIGHT SLIDE ANIMATION ENDS @@@@@@@@@@@@@@@@@@@@@@@ */
+
+/* -----------------------------------------------------Section first ends here-------------------------------- */
+
+
+/* -----------------------------------------------------Section second starts here-------------------------------- */
+#body #home-second {
+    margin-top: 50px;
+    border-top: 1px solid rgb(210, 200, 200);
+}
+
+#body #home-second #ad-space {
+    margin: 30px 70px 30px 70px;
+    border: 2px solid rgb(210, 200, 200);
+    border-radius: 10px;
+    height: 20vh;
+}
+
+#body #home-second #ad-space p {
+    margin-top: 50px;
+    font-size: 30PX;
+    font-weight: bolder;
+    color: red;
+    text-align-last: center;
+    padding: 5px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* -----------------------------------------------------Section second ends here-------------------------------- */
+
+
+/* -----------------------------------------------------Section third starts here-------------------------------- */
+
+
+#body #home-third #elements {
+    border: 1px solid rgb(210, 200, 200);
+    margin: 0px 70px;
+    border-radius: 10px;
+    height: 330px;
+}
+
+
+/* ...........................................new-tutors starts....................................... */
+
+#body #home-third #category1 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 5px 0px 15px 85px;
+    font-size: 40px;
+}
+
+#body #home-third #elements #new-tutor #continue-browsing {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-------------------------------------------------------------#1---------------------------------------------------------------- */
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-1 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#2---------------------------------------------------------------- */
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-2 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#3---------------------------------------------------------------- */
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-3 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#4---------------------------------------------------------------- */
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-4 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#5---------------------------------------------------------------- */
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #poster img {
+
+    height: 100%;
+    width: 101%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-5 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#6---------------------------------------------------------------- */
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #poster img {
+
+    height: 100%;
+    width: 101%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #new-tutor #inside-new-tutor .new-tutor-user-profile-in-homepage-6 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+
+
+/* ...........................................new-tutors ends....................................... */
+
+
+/* ...........................................top rated-tutors starts....................................... */
+
+#body #home-third #category2 {
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: 30px 0px 15px 85px;
+    font-size: 40px;
+}
+
+#body #home-third #elements #top-rated #continue-browsing {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-------------------------------------------------------------#1---------------------------------------------------------------- */
+
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-1 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+
+/*-------------------------------------------------------------#2---------------------------------------------------------------- */
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-2 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#3---------------------------------------------------------------- */
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-3 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#4---------------------------------------------------------------- */
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-4 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#5---------------------------------------------------------------- */
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #poster img {
+
+    height: 100%;
+    width: 101%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #top-rated #inside-top-rated .top-rated-user-profile-in-homepage-5 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+
+/* ...........................................top rated-tutors ends....................................... */
+
+
+/* ...........................................average rated-tutors starts....................................... */
+
+#body #home-third #category3 {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 30px 0px 15px 85px;
+    font-size: 40px;
+}
+
+#body #home-third #elements #average-rated #continue-browsing {
+    display: inline-block;
+    font-size: 25px;
+    cursor: pointer;
+    margin: 10px 20px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*-------------------------------------------------------------#1---------------------------------------------------------------- */
+
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #poster {
+
+    height: 100px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-1 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#2---------------------------------------------------------------- */
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #poster {
+
+    height: 100px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-2 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#3---------------------------------------------------------------- */
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #poster {
+
+    height: 100px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-3 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#4---------------------------------------------------------------- */
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #poster img {
+
+    height: 100%;
+    width: 100.5%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-4 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/*-------------------------------------------------------------#5---------------------------------------------------------------- */
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 {
+    height: 270px;
+    width: 250px;
+    border: 1px solid rgb(210, 200, 200);
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #poster {
+
+    height: 100px;
+    width: 247px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #poster img {
+
+    height: 100%;
+    width: 101%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #profile-picture-and-current-position {
+    display: flex;
+    height: 50px;
+    width: 247px;
+    border-radius: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #profile-picture-and-current-position .profile-picture img {
+    margin-left: 5px;
+    height: 48px;
+    width: 50px;
+    border-radius: 50%;
+    border: 2px solid rgb(237, 234, 234);
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #profile-picture-and-current-position .current-position {
+    margin: 18px 0px 0px 10px;
+    font-size: 100%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #profile-picture-and-current-position .current-position #position {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 80%;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #about {
+
+    height: 80px;
+    width: 247px;
+    border-radius: 5px;
+    border: 1px solid white;
+    font-size: 150%;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #about #under-about {
+    margin: 10px 5px 3px 5px;
+    text-align: justify;
+    font-size: 60%;
+    font-weight: bold;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #rating {
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 247px;
+    border-radius: 5px;
+    font-size: 25px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #star {
+    margin-left: 5px;
+
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #rating #rating-in-number {
+    display: inline-block;
+    margin-left: -150px;
+    margin-top: 5px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #rating #favorite {
+    height: 36px;
+    width: 30px;
+}
+
+#body #home-third #elements #average-rated #inside-average-rated .average-rated-user-profile-in-homepage-5 #rating #favorite img {
+    border-radius: 100%;
+    cursor: pointer;
+    margin: 5px 10px 0px 0px;
+    height: 25px;
+    width: 25px;
+}
+
+/* ................................................................average rated-tutors ends.................................... */
+
+/* -----------------------------------------------------Section third ends here-------------------------------- */
+
+/* -----------------------------------------------------Section fourth starts here-------------------------------- */
+
+#body #home-fourth {
+    margin-top: 50px;
+    /* border-top: 2px solid rgb(210, 200, 200); */
+}
+
+#body #home-fourth #ad-space {
+    margin: 32px 70px 30px 70px;
+    border: 2px solid rgb(210, 200, 200);
+    border-radius: 10px;
+    height: 20vh;
+}
+
+#body #home-fourth #ad-space p {
+    margin-top: 50px;
+    font-size: 30PX;
+    font-weight: bolder;
+    color: red;
+    text-align-last: center;
+    padding: 5px 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* -----------------------------------------------------Section fourth ends here-------------------------------- */
+
+/* .......................................Style for Home page ends here...................................  */
+
+
+/* .......................................Style for doubt-solver-profile-view page Starts here...................................  */
+
+/* -------------------------section first starts here------------------------- */
+
+#doubt-solver-profile-view-first{
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* border: 2px solid red; */
+    border-top: 1px solid rgb(226, 210, 210);
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view{
+    /* border: 2px solid green; */
+    width: 75%;
+    border-radius: 15px;
+    background-color: #d3e4f2;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-poster{
+    height: 40vh;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-poster img{
+    width: 100%;
+    height: 35vh;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: 2px solid rgb(116, 191, 204);
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-poster #doubt-solver-profile-view-picture{
+    scale: 0.5;
+    position: relative;
+    top: -15rem;
+    left: -5rem;
+    width: 35%;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-poster #doubt-solver-profile-view-picture img{
+    border: 10px solid white;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-rating{
+    background-color: rgb(24, 132, 159);
+    padding: 15px;
+   display: flex;
+   border-bottom: 1px solid rgb(214, 200, 200);
+   border-top: 1px solid rgb(214, 200, 200);
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-rating #tag{
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-rating #star-list{
+    width: 170%;
+   display: flex;
+   margin-top: -10px;
+   /* border: 2px solid blue; */
+   justify-content: space-around;
+
+    
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #doubt-solver-profile-view-rating #star-list li{
+    border-radius: 50%;
+    font-size: 35px;
+    /* border: 1px solid green; */
+    color: yellow;
+    list-style: none;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view .uniqueness{
+    width: 80%;
+    display: flex;
+    border: 0.5px solid rgb(192, 189, 189);
+    margin: 20px auto;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view .uniqueness h2{
+    font-size: 30px;
+    margin-left: 30px;
+    color: blue;
+    /* border: 2px solid blue; */
+}
+#doubt-solver-profile-view-first #doubt-solver-profile-view .uniqueness h1{
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 30px;
+    /* border: 2px solid blue; */
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #ask-me-button{
+    float: right;
+    width: 15%;
+    margin: 10px 50px 30px 0px;
+    border-radius: 10px;
+    /* border: 2px solid red; */
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #ask-me-button button{
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 100%;
+    height: 50px;
+    border-radius: 9px;
+    cursor: pointer;
+    border: 2px solid rgb(86, 86, 246);
+    background-color: rgb(86, 86, 246);
+    text-align: left;
+    padding-left: 15px;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #ask-me-button button:hover{
+  
+  background-color: black;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #ask-me-button button span{
+    position: relative;
+    top: 3px;
+    left: 2px;
+    
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view #ask-me-button button span img{
+    width: 20px;
+    filter: invert();
+}
+
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view-ad1{
+    border: 2px solid blue;
+    width: 10rem;
+    height: 50%;
+}
+
+#doubt-solver-profile-view-first #doubt-solver-profile-view-ad2{
+    border: 2px solid blue;
+    width: 10rem;
+    height: 50%;
+}
+
+/* ==========================================Ask me popup starts here================================= */
+
+.ask-me-doubt-popup {
+    position: absolute;
+    top: 137%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+    width: 59%;
+    padding: 20px 50px;
+    background-color: rgb(248, 255, 249);
+    box-shadow: 2px 2px 5px 5px rgba(25, 85, 250, 0.41);
+    border-radius: 10px;
+    z-index: 2;
+    transition: 2s;
+    opacity: 0;
+}
+
+.ask-me-doubt-show-popup {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form h1 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px 0px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form h3 {
+    text-align: justify;
+    color: red;
+    font-size: 20px;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element {
+    margin:25px 0px;
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element label {
+    display: block;
+    font-size: 22px;
+    color: #222;
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element textarea {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #submit-button {
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto;
+}
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #submit-button:hover {
+    background-color: blue;
+    box-shadow: 2px 2px 50px 5px rgba(25, 85, 250, 0.41);
+   
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #upload-image {
+    position: relative;
+    top: -24px;
+    left: 230px;
+    width: 10%;
+    height: 25px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #view-image {
+    position: relative;
+    top: -40px;
+    width: 8%;
+    height: 25px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================Ask me popup ends here================================= */
+
+/* -------------------------section first ends here------------------------- */
+
+/* .......................................Style for doubt-solver-profile-view page Ends here...................................  */
+
+
+
+
+/* .......................................Style for self-profile-view page Starts here...................................  */
+
+/* -------------------------section first starts here------------------------- */
+
+#self-profile-view-first{
+    margin-top: 3.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    /* border: 2px solid red; */
+    border-top: 1px solid rgb(226, 210, 210);
+}
+
+#self-profile-view-first #self-profile-view{
+    /* border: 2px solid green; */
+    width: 75%;
+    border-radius: 15px;
+    background-color: #d3e4f2;
+}
+
+#self-profile-view-first #self-profile-view #self-profile-view-poster{
+    height: 40vh;
+}
+
+#self-profile-view-first #self-profile-view #self-profile-view-poster img{
+    width: 100%;
+    height: 35vh;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border: 2px solid rgb(116, 191, 204);
+}
+
+#self-profile-view-first #self-profile-view #self-profile-view-poster #self-profile-view-picture{
+    scale: 0.5;
+    position: relative;
+    top: -15rem;
+    left: -5rem;
+    width: 35%;
+}
+
+#self-profile-view-first #self-profile-view #self-profile-view-poster #self-profile-view-picture img{
+    border: 10px solid white;
+    background-size: cover;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page{
+    width: 80%;
+    border: 3px solid rgb(164, 189, 245);
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .view-profile-page-heading{
+   display: flex;
+   justify-content: space-between;
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .view-profile-page-heading h1{
+    font-size: 35px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-left: 37px;
+    /* border: 2px solid red; */
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .view-profile-page-heading a {
+    height: 28px;
+    margin: 10px 10px;
+    /* border: 2px solid blue; */
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .view-profile-page-heading a img{
+  width: 25px;
+  /* border: 2px solid aqua; */
+
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .view-profile-page-heading a img:hover{
+ /* background-color: blue; */
+ filter: invert(0.3);
+
+}
+
+
+
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .details{
+    margin-left: 20px;
+    /* border: 3px solid red; */
+}
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .details #self-name,#self-dob,#self-gender,#self-current-position,#self-language-known,#self-member-since,#self-course,#self-institute,#self-class,#self-subject,#self-extra-skill,#self-about-me{
+    max-width: 91.5%;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 20px;
+    outline: none;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .details #self-name h2, #self-dob h2, #self-gender h2, #self-current-position h2,#self-language-known h2,#self-member-since h2,#self-course h2,#self-institute h2,#self-class h2,#self-subject h2,#self-extra-skill h2,#self-about-me h2{
+    margin-top: 5px;
+    font-size: 19px;
+}
+
+#self-profile-view-first #self-profile-view .uniqueness-in-view-profile-page .details #self-name h3, #self-dob h3, #self-gender h3, #self-current-position h3,#self-language-known h3,#self-member-since h3,#self-course h3, #self-institute h3, #self-class h3,#self-subject h3,#self-extra-skill h3,#self-about-me h3{
+    color: rgb(23, 23, 125);
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+#self-profile-view-first #self-profile-view-ad1{
+    border: 2px solid blue;
+    width: 10rem;
+    height: 50%;
+}
+
+#self-profile-view-first #self-profile-view-ad2{
+    border: 2px solid blue;
+    width: 10rem;
+    height: 50%;
+}
+
+/* ==========================================Ask me popup starts here================================= */
+
+.ask-me-doubt-popup {
+    position: absolute;
+    top: 137%;
+    left: 50%;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(0);
+    width: 59%;
+    padding: 20px 50px;
+    background-color: rgb(248, 255, 249);
+    box-shadow: 2px 2px 5px 5px rgba(25, 85, 250, 0.41);
+    border-radius: 10px;
+    z-index: 2;
+    transition: 2s;
+    opacity: 0;
+}
+
+.ask-me-doubt-show-popup {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.25);
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 15px;
+    height: 15px;
+    background-color: #888;
+    color: #eee;
+    text-align: center;
+    line-height: 15px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form h1 {
+    text-align: center;
+    color: #222;
+    margin: 10px 0px 20px 0px;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form h3 {
+    text-align: justify;
+    color: red;
+    font-size: 20px;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element {
+    margin:25px 0px;
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element label {
+    display: block;
+    font-size: 22px;
+    color: #222;
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element textarea {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #submit-button {
+    width: 50%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    background-color: #222;
+    color: #f5f5f5;
+    border-radius: 10px;
+    cursor: pointer;
+    display: block;
+    margin: 0px auto;
+}
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #submit-button:hover {
+    background-color: blue;
+    box-shadow: 2px 2px 50px 5px rgba(25, 85, 250, 0.41);
+   
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #upload-image {
+    position: relative;
+    top: -24px;
+    left: 230px;
+    width: 10%;
+    height: 25px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.ask-me-doubt-popup .ask-me-doubt-form .ask-me-doubt-form-element #view-image {
+    position: relative;
+    top: -40px;
+    width: 8%;
+    height: 25px;
+    outline: none;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* ==========================================Ask me popup ends here================================= */
+
+/* -------------------------section first ends here------------------------- */
+
+/* .......................................Style for self-profile-view page Ends here...................................  */

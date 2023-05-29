@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .overlay {
+            width: 100%;
+            background-color: white;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            transition: 1s;
+
+        }
+
+        .showoverlay {
+            background-color: black;
+            opacity: 1;
+
+        }
+
+        .demo {
+            color: black;
+        }
+
+        .showdemo {
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="showModel()">Dark mode</button>
+    <button onclick="closeModel()">Dark mode r</button>
+    <div class="overlay"></div>
+    <p class="demo">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellat consectetur, excepturi possimus
+        quod dicta nobis tenetur alias. Soluta ullam error sequi hic distinctio eum, repellat quidem ad perferendis
+        maiores minima optio fugiat accusantium labore unde! Ab, dolorum debitis dolore quas voluptas labe obcaecati quod minus expedita? Iusto, reiciendis quasi.</p>
+    <script>
+        let button=document.querySelector('button');
+        console.log(button)
+        function showModel() {
+            document.querySelector('.overlay').classList.add('showoverlay');
+            document.querySelector('.demo').classList.add('showdemo');
+        }
+        
+        function closeModel() {
+            document.querySelector('.overlay').classList.remove('showoverlay');
+            document.querySelector('.demo').classList.remove('showdemo');
+            
+        }
+
+        if (button==1) {
+            showModel();
+            console.log('true')
+        }
+        else if(button==0){
+            closeModel();
+            console.log('false')
+        }
+    </script>
+</body>
+
+</html>

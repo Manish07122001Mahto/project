@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="profile-page-overlay"></div> <!-- For profile-page-popup-->
+
+    <div id="logo">
+        <a href="#">
+            <img src="Images/logo.png">
+        </a>
+    </div>
+
+    <h1 id="heading">Create Your Profile</h1>
+
+    <section id="profile">
+        <div id="profile-ad1">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quos iste dolor corporis eius. Excepturi
+                tempora nostrum voluptates quas corporis cupiditate error ipsam pariatur, harum deleniti nam culpa omnis
+                fuga.</p>
+        </div>
+
+        <div id="under-profile">
+            <div class="header">
+                <img src="Images/profile-poster.jpg">
+                <div class="profile-picture">
+                    <img src="Images/demo.jpg">
+
+
+                </div>
+            </div>
+
+            <p id="create-profile-page-notice">N.B.: All the following feild's are mandatory to fill, if you are a
+                tutor.</p>
+
+            <form action="solvik.com" id="profile-form">
+                <div class="profile-content">
+                    <label for="user-name">Full Name</label>
+                    <input type="text" name="user-name" id="user-name" placeholder="Your name">
+                </div>
+
+                <div class="profile-content">
+                    <label for="age">Date-of-Birth</label>
+                    <input type="date" name="user-age" id="age">
+                </div>
+
+                <div class="profile-content">
+                    <label for="position">Current Position</label>
+                    <input type="text" name="user-position" id="position"
+                        placeholder="E.g., Student, IT Professional, etc.">
+                </div>
+
+                <div class="profile-content">
+                    <label for="course">Course </label>
+                    <input type="text" name="user-course" id="course" placeholder="E.g., B.Tech, BSC in Physics, etc.">
+                </div>
+
+                <div class="profile-content">
+                    <label for="institute">Institute </label>
+                    <input type="text" name="user-institute" id="institute"
+                        placeholder="E.g., Oxford University, IIT Delhi, etc.">
+                </div>
+
+                <div class="profile-content">
+                    <label for="class">Class / Year </label>
+
+                    <select name="user-class" id="class">
+                        <option value="none" selected>none</option>
+                        <option value="Pre-Matriculation">Pre-Matriculation</option>
+                        <option value="Post-Matriculation">Post-Matriculation</option>
+                        <option value="UG 1st Year">UG 1st Year</option>
+                        <option value="UG 2nd Year">UG 2nd Year</option>
+                        <option value="UG 3rd Year">UG 3rd Year</option>
+                        <option value="UG 4th Year">UG 4th Year</option>
+                        <option value="Graduated">Graduated</option>
+                        <option value="PG 1st Year">PG 1st Year</option>
+                        <option value="PG 2nd Year">PG 2nd Year</option>
+                        <option value="Others">Others</option>
+                    </select>
+                </div>
+
+                <div class="profile-content">
+                    <h3>Subjects in which you have GRIP</h3>
+                    <span onclick="profile_page_showModel()"><span class="plus">&plus;</span> Add new Subject</span>
+
+                </div>
+
+                <div class="profile-content">
+                    <label for="Member-since">Member Since </label>
+                    <input type="text" name="user-Member-since" id="Member-since" placeholder="Current date and time">
+                </div>
+
+                <div class="profile-content">
+                    <label for="">Gender :</label>
+                    <span> Male<input type="radio" name="user-gender" id="gender">
+                        Female<input type="radio" name="user-gender" id="gender">
+                        Others<input type="radio" name="user-gender" id="gender"> </span>
+                </div>
+
+                <div class="profile-content">
+                    <label for="language">Language Known: </label>
+                    <span><span class="plus">&plus;</span> Add new Language</span>
+                    <input type="text" name="user-language" id="language" placeholder="English, Hindi, etc.">
+                </div>
+
+                <div class="profile-content">
+                    <label for="skills">Extra skills </label>
+                    <input type="text" name="user-skills" id="skills"
+                        placeholder="E.g. Video Editor, Photo Editing, etc,.">
+                </div>
+
+                <div class="profile-content">
+                    <label for="About-us">About yourself</label>
+
+                    <textarea id="About-us" name="user-About us" rows="10" cols="50"
+                        placeholder="E.g.: I can teach complex topics into simpler methods/formulas."></textarea>
+                </div>
+
+                <div class="finish-button">
+                    <button class="finish" type="submit">Finish</button>
+                </div>
+
+                <div id="skip"><a href="home_page.html">Skip now<span>&#8594</span></a></div>
+            </form>
+
+            <!---------- Pop-up for Subjects in which you have GRIP (+Add new Subject) starts here---------- -->
+
+            <div class="profile-page-popup">
+
+                <div class="profile-page-close-btn" onclick="profile_page_closeModel()">&times;</div>
+                <div class="profile-page-form">
+                    <h2>Add New Subjects</h2>
+                    <form action="solvik.com">
+                        <div class="profile-page-form-element">
+                            <label for="subject">Subject Name</label>
+                            <input type="text" name="user-subject" id="subject"
+                                placeholder="E.g., English, Hindi, Programming in C/C++, etc.">
+                        </div>
+
+                        <div class="profile-page-form-element">
+                            <label for="sub-topic">Sub-topic of above subject (if avalaible).</label>
+                            <input type="text" name="user-sub-topic" id="sub-topic"
+                                placeholder="E.g., Grammer, Thermodynamics, etc.">
+                        </div>
+
+                        <div class="profile-page-form-element">
+                            <button type="submit">Submit</button>
+
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+            <!---------- Pop-up for Subjects in which you have GRIP (+Add new Subject) ends here---------- -->
+
+        </div>
+
+        <div id="profile-ad2">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quos iste dolor corporis eius. Excepturi
+                tempora nostrum voluptates quas corporis cupiditate error ipsam pariatur, harum deleniti nam culpa omnis
+                fuga. lorem1009</p>
+        </div>
+
+    </section>
+
+    <!-- ---------------------Footer-------- -->
+
+    <section id="fourth">
+        <div class="footer" id="col_1">
+            <h3>COMPANY</h3>
+            <ul>
+                <li><a href="About us.html" target="_blank">About Us</a></li>
+                <li><a href="Blog.html" target="_blank">Blog</a></li>
+                <li><a href="Privacy_policy.html" target="_blank">Privacy policy</a></li>
+                <li><a href="Terms&Conditions.html" target="_blank">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer" id="col_2">
+            <h3>CATEGORIES</h3>
+            <ul>
+                <li><a href="#">Programming in C</a></li>
+                <li><a href="#">Programming in C++</a></li>
+                <li><a href="#">Programming in Java</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="footer" id="col_3">
+            <h3>HELP & SUPPORT</h3>
+            <ul>
+                <li><a href="#">User guidlines</a></li>
+                <li><a href="#">Report</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+
+    </section>
+
+    <section id="fifth">
+        <div class="container">
+
+            <div class="left">
+
+                <a href="#">
+                    <img src="Images/logo.png">
+
+                </a>
+
+            </div>
+            <div class="center">
+                <h4 class="company_name">
+                    <span id="copyright">&copy</span>Solivk Pvt.Ltd 2024
+                </h4>
+            </div>
+
+            <div class="right">
+                <ul class="social-links">
+                    <li><a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/twitter.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/facebook.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/linkedin.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/youtube.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/instagram.png">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

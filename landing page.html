@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solvik.com - connect's one to one easily</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <div class="overlay"></div> <!-- For login-popup-->
+    <div class="create-account-overlay"></div> <!-- For create-account-popup-->
+    <div class="forget-password-overlay"></div> <!-- For forget-password-popup-->
+
+
+    <!-- section-1 starts -->
+    <section id="first">
+        <!-- header starts-->
+        <header class="header">
+            <!-- page logo -->
+            <div class="logo">
+                <a href="#">
+                    <img src="Images/logo.png">
+
+                </a>
+            </div>
+            <!-- navigation bar -->
+            <div class="nav">
+                <ul class="inside-nav">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#col_2">Categories</a></li>
+                    <li><a href="#col_1">Company</a></li>
+                    <li><a href="#col_3">Contact us</a></li>
+                </ul>
+            </div>
+        </header> <!-- header ends-->
+        <h1>Find the perfect <i>Doubt solver</i></h1>
+        <h1 id="next-line">for your Doubt</h1>
+
+
+        <!-- -Button Design and popup starts--------------------- -->
+        <!-- ----------------------------------create-account-popup starts------------------------------ -->
+
+        <span class="landing_page_button">
+            <button id="create_button" onclick="create_account_showModel()">Create Account</button>
+        </span>
+
+        <div class="create-account-popup">
+
+            <div class="create-account-close-btn" onclick="create_account_closeModel()">&times;</div>
+            <div class="create-account-form">
+                <h2>Create Account</h2>
+                <form action="solvik.com">
+                    <div class="create-account-form-element">
+                        <label for="create-account-email">Username</label>
+                        <input type="email" name="user-email" id="create-account-email" placeholder="Your email">
+                    </div>
+
+                    <div class="create-account-form-element">
+                        <label for="create-account-OTP">Enter OTP</label>
+                        <input type="text" name="user-otp" id="create-account-OTP" placeholder="One Time Password">
+                    </div>
+                    <div class="create-account-form-element">
+                        <label for="create-account-create-password">Create password</label>
+                        <img id="create-account-visibility-create-password" src="Images/visibility.png">
+                        <input type="password" name="user-password-1" id="create-account-create-password"
+                            placeholder="Magic#10">
+                    </div>
+                    <div class="create-account-form-element">
+                        <label for="create-account-confirm-password">Confirm Password</label>
+                        <img id="create-account-visibility-confirm-password" src="Images/visibility.png">
+
+                        <input type="password" name="user-password-2" id="create-account-confirm-password"
+                            placeholder="Confirm password">
+                    </div>
+
+
+
+                    <div class="create-account-form-element">
+                        <button type="submit">Submit</button>
+                    </div>
+
+                    <div class="create-account-form-element">
+                        <button type="button">Resend OTP</button>
+                    </div>
+
+                    <div class="create-account-form-element">
+                        <p id="create-account-attention">N.B: use combinition(a-z,A-Z,special character,numbers) 8-12
+                            character allowed only!</p>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <!-- ----------------------------------create-account-popup ends------------------------------ -->
+
+        <!-- ----------------------------------login popup starts------------------------------ -->
+
+        <span class="landing_page_button">
+            <button id="log-in_button" onclick="showModel()">Log-in</button>
+        </span>
+
+        <div class="popup">
+
+            <div class="close-btn" onclick="closeModel()">&times;</div>
+            <div class="form">
+                <h2>Log-in</h2>
+                <form action="input_profile_page.html">
+                    <div class="form-element">
+                        <label for="email">Username</label>
+                        <input type="email" name="user-email" id="email" placeholder="username(email)">
+                    </div>
+
+                    <div class="form-element">
+                        <label for="password">Password</label>
+                        <input type="password" name="user-password" id="password" placeholder="Enter password">
+                    </div>
+                    <div class="form-element">
+                        <a href="#" id="forgot-password" onclick="closeModel(),forget_password_showModel()">Forgot
+                            password?</a>
+                    </div>
+
+                    <div class="form-element">
+                       <button>Log in</button>
+
+                    </div>
+
+                    <div class="form-element" id="create-account-in-popup">
+                        <p>Don't have account?<a href="#" onclick="closeModel(),create_account_showModel()">Create
+                                Account</a></p>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <!-- ----------------------------------login popup ends------------------------------ -->
+        <!-- ----------------------------------forget-password-popup starts------------------------------ -->
+
+        <div class="forget-password-popup">
+
+            <div class="forget-password-close-btn" onclick="forget_password_closeModel()">&times;</div>
+            <div class="forget-password-form">
+                <h2>Forget Password</h2>
+                <form action="solvik.com">
+                    <div class="forget-password-form-element">
+                        <label for="forget-password-email">Username</label>
+                        <input type="email" name="user-email" id="forget-password-email" placeholder="Email">
+                    </div>
+
+                    <div class="forget-password-form-element">
+                        <label for="forget-password-OTP">Enter OTP</label>
+                        <input type="email" name="user-email" id="forget-password-OTP" placeholder="One Time Password">
+                    </div>
+
+                    <div class="forget-password-form-element">
+                        <label for="forget-password-create-password">Create Password</label>
+                        <input type="password" name="user-password" id="forget-password-create-password"
+                            placeholder="Magic#10">
+                    </div>
+
+                    <div class="forget-password-form-element">
+                        <label for="forget-password-confirm-password">Confirm Password</label>
+                        <input type="password" name="user-password" id="forget-password-confirm-password"
+                            placeholder="Confirm password">
+                    </div>
+
+                    <div class="forget-password-form-element">
+                        <button type="submit">Submit</button>
+
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+        <!-- ----------------------------------forget-password-popup ends------------------------------ -->
+
+
+        <!-- ----------------------------------Button Design and popup ends------------------------------ -->
+
+        <div id="right_img">
+            <img
+                src="https://static.uacdn.net/production/_next/static/images/home-illustration.svg?q=75&auto=format%2Ccompress&w=1200">
+        </div>
+    </section> <!-- section-1 ends -->
+
+    <!-- section-2 starts -->
+    <section id="second">
+        <h2>Over <span id="second_inside_span">10,000+</span> learner's trust this platform for solving instant doubt.
+        </h2>
+
+
+    </section> <!-- section-2 ends -->
+
+    <!-- section-3 starts -->
+    <section id="third">
+        <div class="heading">
+            <h1>
+                Ratings & Reviews
+            </h1>
+        </div>
+        <div class="one">
+            <div class="one_one">
+                <div class="one_one_number"> 4.4 </div>
+                <div class="one_one_star">★</div>
+            </div>
+
+            <div class="one_two">
+                <ul>
+                    <li>5★<div id="bar1"></div>
+                    </li>
+                    <li>4★<div id="bar2"></div>
+                    </li>
+                    <li>3★<div id="bar3"></div>
+                    </li>
+                    <li>2★<div id="bar4"></div>
+                    </li>
+                    <li>1★<div id="bar5"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="one_one_analysis">0 Ratings & 0 Reviews</div>
+
+    </section> <!-- section-3 ends -->
+
+    <!-- section-4 starts -->
+    <section id="fourth">
+        <div class="footer" id="col_1">
+            <h3>COMPANY</h3>
+            <ul>
+                <li><a href="About us.html" target="_blank">About Us</a></li>
+                <li><a href="Blog.html" target="_blank">Blog</a></li>
+                <li><a href="Privacy_policy.html" target="_blank">Privacy policy</a></li>
+                <li><a href="Terms&Conditions.html" target="_blank">Terms & Conditions</a></li>
+            </ul>
+        </div>
+        <div class="footer" id="col_2">
+            <h3>CATEGORIES</h3>
+            <ul>
+                <li><a href="#">Programming in C</a></li>
+                <li><a href="#">Programming in C++</a></li>
+                <li><a href="#">Programming in Java</a></li>
+                <li><a href="#">More</a></li>
+            </ul>
+        </div>
+        <div class="footer" id="col_3">
+            <h3>HELP & SUPPORT</h3>
+            <ul>
+                <li><a href="#">User guidlines</a></li>
+                <li><a href="#">Report</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Contact us</a></li>
+            </ul>
+        </div>
+
+    </section> <!-- section-4 ends -->
+
+    <!-- section-5 starts -->
+    <section id="fifth">
+        <div class="container">
+
+            <div class="left">
+
+                <a href="#">
+                    <img src="Images/logo.png">
+
+                </a>
+
+            </div>
+            <div class="center">
+                <h4 class="company_name">
+                    <span id="copyright">&copy</span>Solivk Pvt.Ltd 2024
+                </h4>
+            </div>
+
+            <div class="right">
+                <ul class="social-links">
+                    <li><a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/twitter.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/facebook.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/linkedin.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/youtube.png">
+                            </span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon">
+                                <img calss="" src="Images/instagram.png">
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </section> <!-- section-5 ends -->
+</body>
+
+</html>
